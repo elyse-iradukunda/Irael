@@ -1,13 +1,13 @@
+// import Image1 from './assets/EYE.jpg'
 function Image(){
- 
+  const srcc = '  /src/assets/EYE.jpg';
+ return (
     <>
-    <div className="flex gap-4 justify-center flex-wrap">
-      <img src="/img1.jpg" alt="pic1" className="w-48 h-auto" />
-      <img src="/img2.jpg" alt="pic2" className="w-48 h-auto" />
-      <img src="/img3.jpg" alt="pic3" className="w-48 h-auto" />
+    <div className=" relative w-auto">
+      <img src={srcc}alt="pic1" className="w-1000 h-150 opacity-80" />
     </div>
     </>
-
+)
 
 }
 export default Image;
