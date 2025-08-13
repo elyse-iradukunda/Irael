@@ -9,10 +9,10 @@ function Menu(){
     return(
     <>
     <nav className="">
-        <div className=" flex ml-60 mt-4">
+        <div className=" flex  mt-4">
             <ul className="flex space-x-10">
                 <li className="flex gap-2"><IoMdHome className="text-2xl"/><a href="">Home</a></li>
-                <div className="flex space-x-10 ml-50" >
+                <div className="flex space-x-10 ml-20" >
                     <li className="flex gap-2"><FaPersonChalkboard className="text-2xl"/><a href="">About Me</a></li>
                     <li className="flex gap-2"><GiSelfLove className="text-2xl"/><a href="">Hobbies</a></li>
                     <li className="flex gap-2"><IoMdSettings className="text-2xl"/><a href="">Work </a></li>
