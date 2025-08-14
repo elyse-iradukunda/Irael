@@ -12,9 +12,8 @@ function Menu() {
 
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-      {/* Header with Hamburger */}
       <div className="flex justify-between items-center p-4 sm:p-6">
-        <h1 className="text-xl font-bold">My Menu</h1>
+        <h1 className="text-2xl font-bold text-blue-600">Elyse Iradukunda</h1>
         <button
           className="sm:hidden text-2xl"
           onClick={() => setOpen(!open)}
@@ -23,7 +22,7 @@ function Menu() {
         </button>
       </div>
 
-      {/* Menu Items */}
+    
       <ul
         className={`flex flex-col sm:flex-row sm:items-center sm:justify-center sm:space-x-10 
         transition-all duration-500 overflow-hidden sm:overflow-visible
