@@ -39,18 +39,6 @@ function AboutMe() {
           </ul>
         </div>
       </div>
-
-     
-      <div className="bg-white shadow-lg rounded-xl p-6 text-center md:text-left">
-        <h2 className="text-2xl font-semibold mb-4">📫 Connect with Me</h2>
-        <p className="text-gray-700 mb-2">
-          Email: <a href="mailto:ellycreativity8@gmail.com" className="text-blue-500">ellycreativity8@gmail.com</a>
-        </p>
-        <p className="text-gray-700 mb-2">Phone: +250 798454108</p>
-        <p className="text-gray-700">
-          Instagram: <a href="https://instagram.com/Ellyse_photographer" className="text-blue-500">@Ellyse_photographer</a>
-        </p>
-      </div>
     </div>
   );
 }

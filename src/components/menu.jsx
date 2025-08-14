@@ -46,7 +46,7 @@ function Menu() {
         </li>
         <li className="flex items-center gap-2 p-4 hover:text-blue-500 transition-colors">
           <TiSocialAtCircular className="text-2xl" />
-          <a href="#">Contact Me</a>
+          <a href="#footer">Contact Me</a>
         </li>
       </ul>
     </nav>

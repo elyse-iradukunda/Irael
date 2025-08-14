@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import img1 from "../assets/DSC_3111.jpg";
 import img2 from "../assets/DSC_3644.jpg";
 import img3 from "../assets/akaraboBest.jpg";
+import img4 from "../assets/DSC_3653.jpg";
+import img5 from "../assets/DSC_9390.jpg";
+import img6 from "../assets/EMY_4565.jpg";
 
 function QuoteSlider() {
   const slides = [
@@ -11,45 +14,54 @@ function QuoteSlider() {
     { type: "text", content: "“Stay focused and keep learning.” – Someone" },
     { type: "image", content: img3 },
     { type: "text", content: "“Creativity is intelligence having fun.” – Someone" },
+    { type: "image", content: img4 },
+    { type: "text", content: "“Consistency beats talent when talent doesn't work hard.” – Someone" },
+    { type: "image", content: img5 },
+    { type: "text", content: "“Believe you can and you’re halfway there.” – Someone" },
+    { type: "image", content: img6 },
   ];
 
-  const sliderSlides = [...slides, ...slides]; 
+  const sliderSlides = [...slides, ...slides];
   const [offset, setOffset] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
+    if (paused) return;
+
     const interval = setInterval(() => {
       setOffset((prev) => {
-        if (prev <= -(100 / 3) * slides.length) {
-          return 0; 
-        }
-        return prev - 0.09; 
+        if (prev <= -(100 / 10) * slides.length) return 0;
+        return prev - 0.09;
       });
-    }, 16); 
+    }, 16);
+
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [slides.length, paused]);
 
   return (
     <div className="relative w-full overflow-hidden mt-20">
       <div
-        className="flex"
-        style={{
-          transform: `translateX(${offset}%)`,
-          transition: "transform 0.6s linear",
-        }}
+        className="flex transition-transform duration-500 ease-linear"
+        style={{ transform: `translateX(calc(${offset}% + 50px))` }}
       >
         {sliderSlides.map((slide, i) => (
-          <div key={i} className="flex-shrink-0 w-1/3 p-2">
+          <div
+            key={i}
+            className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-2"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
             {slide.type === "image" ? (
-              <div className="bg-white shadow-lg rounded-xl overflow-hidden ">
+              <div className="bg-white shadow-lg rounded-xl overflow-hidden relative">
                 <img
                   src={slide.content}
                   alt={`Slide ${i}`}
-                  className="w-[600px] h-[600px] object-cover"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             ) : (
-              <div className="bg-blue-100 text-center p-6 shadow-lg rounded-xl h-[300px] flex items-center justify-center">
-                <p className="text-lg italic">{slide.content}</p>
+              <div className="bg-blue-100 text-center p-6 shadow-lg rounded-xl h-64 sm:h-80 md:h-96 lg:h-[300px] flex items-center justify-center">
+                <p className="text-base sm:text-lg md:text-xl italic">{slide.content}</p>
               </div>
             )}
           </div>
@@ -60,3 +72,4 @@ function QuoteSlider() {
 }
 
 export default QuoteSlider;
+
