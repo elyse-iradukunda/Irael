@@ -34,7 +34,7 @@ function Menu() {
         </li>
         <li className="flex items-center gap-2 p-4 hover:text-blue-500 transition-colors">
           <FaPersonChalkboard className="text-2xl" />
-          <a href="#">About Me</a>
+          <a href="#AboutMe">About Me</a>
         </li>
         <li className="flex items-center gap-2 p-4 hover:text-blue-500 transition-colors">
           <GiSelfLove className="text-2xl" />

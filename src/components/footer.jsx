@@ -6,9 +6,9 @@ function Footer() {
     <footer id="footer" className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6 md:flex md:justify-between md:items-start">
         
-        {/* Contact Info */}
+   
         <div className="mb-8 md:mb-0">
-          <h2 className="text-2xl font-bold mb-4">📫 Connect with Me</h2>
+        <h2 className="text-2xl font-bold mb-4">📫 Connect with Me</h2>
           <div className="flex items-center mb-2">
             <FaEnvelope className="mr-2 text-blue-400" />
             <a href="mailto:ellycreativity8@gmail.com" className="hover:underline text-gray-300">
@@ -29,7 +29,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Optional: Quick Links or About */}
+     
         <div className="mb-8 md:mb-0">
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul>
@@ -39,7 +39,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* About / Branding */}
+
         <div>
           <h3 className="text-xl font-semibold mb-4">About Me</h3>
           <p className="text-gray-400 max-w-xs">
@@ -48,7 +48,6 @@ function Footer() {
         </div>
       </div>
 
-      {/* Footer Bottom */}
       <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
         &copy; {new Date().getFullYear()} Ellyse Photographer. All rights reserved.
       </div>

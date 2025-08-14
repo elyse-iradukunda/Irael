@@ -11,7 +11,7 @@ function App() {
       <Menu/> 
       <br /> <br /><br /><br /> <br /><br /><br /><br />
       <ImageSlider /> <br /><br />
-
+     <br /><br /><br /><br />
       <AboutMe/>
       <Footer/>
     </>

@@ -1,10 +1,9 @@
 
-import React from "react";
 import profilePic from "../assets/profile.jpg"; 
 
 function AboutMe() {
   return (
-    <div className="min-h-screen bg-gray-50 p-6 md:p-16">
+    <div id="AboutMe" className="min-h-screen bg-gray-50 p-6 md:p-16">
    
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-2">👋 Hey there, I'm Elyse Iradukunda!</h1>
