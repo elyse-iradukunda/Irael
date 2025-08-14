@@ -7,7 +7,8 @@ function App() {
   return (
     <>
       <Menu/> 
-      <ImageSlider/>
+      <br /> <br /><br /><br />
+      <ImageSlider />
     </>
   )
 }

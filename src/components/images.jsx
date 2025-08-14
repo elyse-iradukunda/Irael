@@ -11,18 +11,31 @@ function ImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // 
+    }, 3000); // move every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-auto sm:h-[350px] overflow-hidden">
-      <img
-        src={images[index]}
-        alt={`Slide ${index}`}
-        className="w-full h-100 object-cover transition-opacity duration-900 ease-in-out "
-      />
-     <div className="absolute inset-0 bg-opacity-20"></div>
+    <div className="relative w-full overflow-hidden mt-20">
+      <div
+        className="flex transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${index * 33.3333}%)` }}
+      >
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 w-1/3 p-2"
+          >
+            <div className="bg-white shadow-lg rounded-xl overflow-hidden">
+              <img
+                src={src}
+                alt={`Slide ${i}`}
+                className="w-full h-[300px] object-cover"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
