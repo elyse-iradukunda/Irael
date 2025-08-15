@@ -24,17 +24,17 @@ export default function HobbiesCarousel({
 
   return (
     <div
-      className="mx-auto px-4 max-w-4xl relative"
+      className="mx-auto px-2 sm:px-4 max-w-full flex flex-col md:flex-row items-center justify-center md:gap-6 gap-4"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Left Card */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/90 text-blue-400 p-4 rounded-r-lg shadow-lg z-10">
-        <p className="font-bold text-sm md:text-lg">Photographer</p>
+
+      <div className="flex-shrink-0 w-full sm:w-40 md:w-64 h-48 sm:h-56 md:h-80 bg-white text-black flex items-center justify-center rounded-xl shadow-lg border border-blue-400 p-3 md:p-4">
+        <p className="font-bold text-center text-sm sm:text-base md:text-lg">Photography 🎬<br />Travel 🌍<br />Music 🎵</p>
       </div>
 
-      {/* Carousel */}
-      <div className="relative overflow-hidden rounded-xl shadow-lg aspect-[4/3]">
+
+      <div className="flex-1 w-full md:max-w-2xl relative overflow-hidden rounded-xl shadow-lg aspect-[4/3] max-h-[500px]">
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"
           style={{ transform: `translateX(-${index * 100}%)` }}
@@ -60,9 +60,8 @@ export default function HobbiesCarousel({
         </div>
       </div>
 
-      {/* Right Card */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/90 text-blue-400 p-4 rounded-l-lg shadow-lg z-10">
-        <p className="font-bold text-sm md:text-lg">lo</p>
+      <div className="flex-shrink-0 w-full sm:w-40 md:w-64 h-48 sm:h-56 md:h-80 bg-white text-black flex items-center justify-center rounded-xl shadow-lg border border-blue-400 p-3 md:p-4">
+        <p className="font-bold text-center text-sm sm:text-base md:text-lg">Coding 💻<br />Building Apps 📱<br />Learning New Tech ⚡</p>
       </div>
     </div>
   );
