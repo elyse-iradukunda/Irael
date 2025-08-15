@@ -24,22 +24,29 @@ export default function HobbiesCarousel({
 
   return (
     <div
-      className="max-w-5xl mx-auto px-4"
+      className="mx-auto px-4 max-w-4xl relative"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="relative overflow-hidden rounded-xl shadow-lg aspect-[16/9]">
+      {/* Left Card */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/90 text-blue-400 p-4 rounded-r-lg shadow-lg z-10">
+        <p className="font-bold text-sm md:text-lg">Photographer</p>
+      </div>
+
+      {/* Carousel */}
+      <div className="relative overflow-hidden rounded-xl shadow-lg aspect-[4/3]">
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {images.map((img, i) => (
-            <img
-              key={i}
-              src={img.src}
-              alt={img.alt || `Hobby ${i + 1}`}
-              className="w-full h-full object-cover flex-shrink-0"
-            />
+            <div key={i} className="w-full h-full flex-shrink-0 flex items-center justify-center">
+              <img
+                src={img.src}
+                alt={img.alt || `Hobby ${i + 1}`}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           ))}
         </div>
         <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
@@ -51,6 +58,11 @@ export default function HobbiesCarousel({
             />
           ))}
         </div>
+      </div>
+
+      {/* Right Card */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/90 text-blue-400 p-4 rounded-l-lg shadow-lg z-10">
+        <p className="font-bold text-sm md:text-lg">lo</p>
       </div>
     </div>
   );

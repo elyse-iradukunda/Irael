@@ -26,7 +26,7 @@ function App() {
           { src: img3, alt: "Photography" },
         ]}
       />
-
+  <br /><br /><br />
       <Footer />
     </>
   )
