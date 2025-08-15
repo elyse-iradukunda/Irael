@@ -9,15 +9,15 @@ import img6 from "../assets/EMY_4565.jpg";
 function QuoteSlider() {
   const slides = [
     { type: "image", content: img1 },
-    { type: "text", content: "“Life is what happens when you’re busy coding.” – Someone" },
+    { type: "text", content: "“Programs must be written for people to read, and only incidentally for machines to execute.” – Harold Abelson" },
     { type: "image", content: img2 },
-    { type: "text", content: "“Stay focused and keep learning.” – Someone" },
+    { type: "text", content: "“The best thing about a picture is that it never changes, even when the people in it do.” – Andy Warhol" },
     { type: "image", content: img3 },
-    { type: "text", content: "“Creativity is intelligence having fun.” – Someone" },
+    { type: "text", content: "“Talk is cheap. Show me the code.” – Linus Torvalds" },
     { type: "image", content: img4 },
-    { type: "text", content: "“Consistency beats talent when talent doesn't work hard.” – Someone" },
+    { type: "text", content: "“Consistency beats talent when talent doesn't work hard.” – Irael" },
     { type: "image", content: img5 },
-    { type: "text", content: "“Believe you can and you’re halfway there.” – Someone" },
+    { type: "text", content: "“Be yourself; everyone else is already taken.” – Oscar Wilde" },
     { type: "image", content: img6 },
   ];
 
